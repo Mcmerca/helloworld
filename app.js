@@ -26,9 +26,9 @@ if (isLoggedIn === true) {
     console.log("Du måste logga in")
 } */
 
-//Övning 2//
+//Övning 3//
 
-const trafficLight = "röd";
+/* const trafficLight = "röd";
 
 switch (trafficLight) {
     case "grön":
@@ -42,5 +42,24 @@ switch (trafficLight) {
         break;
     default:
         console.log("Okänd signal");
+        break;
+} */
+
+//Övning 4//
+
+const weather = "snö";
+
+switch (weather) {
+    case "regn":
+        console.log("Ta med paraply, det regnar.")
+        break;
+    case "sol":
+        console.log("Glöm inte solglasögon");
+        break;
+    case "snö":
+        console.log("Ta på dig en varm jacka, det är svinkallt");
+        break;
+    default:
+        console.log("Kolla väderappen igen")
         break;
 }
