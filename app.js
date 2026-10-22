@@ -47,7 +47,7 @@ switch (trafficLight) {
 
 //Övning 4//
 
-const weather = "snö";
+/* const weather = "snö";
 
 switch (weather) {
     case "regn":
@@ -62,4 +62,16 @@ switch (weather) {
     default:
         console.log("Kolla väderappen igen")
         break;
+} */
+
+//övning 5//
+
+/* for (let i = 1; i < 6; i++){
+    console.log(i);
+} */
+
+const fruits = ["banan", "äpple", "körsbär"]
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i])
 }
