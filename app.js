@@ -13,7 +13,7 @@ else{
 
 //Övning 2//
 
-const isLoggedIn = true;
+/* const isLoggedIn = true;
 const userRole = "admin";
 
 if (isLoggedIn === true) {
@@ -24,4 +24,23 @@ if (isLoggedIn === true) {
     }
 } else {
     console.log("Du måste logga in")
+} */
+
+//Övning 2//
+
+const trafficLight = "röd";
+
+switch (trafficLight) {
+    case "grön":
+        console.log("Kör");
+        break;
+    case "gul":
+        console.log("stanna om det är säkert");
+        break;
+    case "röd":
+        console.log("Stanna");
+        break;
+    default:
+        console.log("Okänd signal");
+        break;
 }
