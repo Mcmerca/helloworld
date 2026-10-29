@@ -70,8 +70,8 @@ switch (weather) {
     console.log(i);
 } */
 
-const fruits = ["banan", "äpple", "körsbär"]
+/* const fruits = ["banan", "äpple", "körsbär"]
 
 for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i])
-}
+} */
