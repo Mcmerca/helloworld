@@ -86,7 +86,7 @@ console.log(valkommen("Sonny", "admin")) */
 
 //Övning 2
 
-const provPoang = [18, 22, 15, 28, 20];
+/* const provPoang = [18, 22, 15, 28, 20];
 
 const raknaMedel = (provPointsArr) => {
     let summa = 0;
@@ -100,4 +100,28 @@ const raknaMedel = (provPointsArr) => {
 
 
 console.log(`Medelpoäng på provet: ${raknaMedel(provPoang)}`)
+ */
 
+//Övning
+
+const kunder = [
+    { namn: "Mia", VIP: true , kopSumma: 1200},
+    { namn: "Sam", VIP: false, kopSumma: 450},
+    { namn: "Robin", VIP: true, kopSumma: 800},
+]
+
+const getVipBonus = (kundArr) => {
+    const result = [];
+
+    for (const kund of kundArr) {
+        if (kund.VIP === true) {
+            const nyttPris = kund.kopSumma * 0.9
+            const vipKund = { namn: kund.namn, kopSumma: nyttPris}
+            result.push(vipKund)
+        }
+    }
+    
+    return result;
+}
+
+console.log(getVipBonus(kunder))
