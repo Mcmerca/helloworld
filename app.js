@@ -78,8 +78,26 @@ for (let i = 0; i < fruits.length; i++) {
 
 //Övning 1
 
-const valkommen = (namn, titel = "medlem") => {
+/* const valkommen = (namn, titel = "medlem") => {
     return `Välkommen ${namn} din roll är ${titel}`
 }
 
-console.log(valkommen("Sonny", "admin"))
+console.log(valkommen("Sonny", "admin")) */
+
+//Övning 2
+
+const provPoang = [18, 22, 15, 28, 20];
+
+const raknaMedel = (provPointsArr) => {
+    let summa = 0;
+
+    for (const point of provPointsArr){
+        summa += point;
+    }
+
+    return summa / provPointsArr.length;
+}
+
+
+console.log(`Medelpoäng på provet: ${raknaMedel(provPoang)}`)
+
