@@ -75,3 +75,11 @@ switch (weather) {
 for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i])
 } */
+
+//Övning 1
+
+const valkommen = (namn, titel = "medlem") => {
+    return `Välkommen ${namn} din roll är ${titel}`
+}
+
+console.log(valkommen("Sonny", "admin"))
