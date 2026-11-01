@@ -134,7 +134,7 @@ console.log(getVipBonus(kunder))
 
 
 //Kvällsövning sortering, filtrering, push & vilkor för att pusha genom en funktion
-const lista = [14, 1, 55, 32, 12, 7, 5, 4, 44];
+/* const lista = [14, 1, 55, 32, 12, 7, 5, 4, 44];
 
 const sortedList = (nummerLista) => {
     
@@ -155,4 +155,18 @@ const sortedList = (nummerLista) => {
 
 console.log(sortedList(lista));
 
+ */
+
+//Torsdagsövning egen callback funktion
+
+const versaler = (str) => str.toUpperCase()
+const citera = (str) => `"${str}"`
+
+const formateraText = (text, callback) => callback(text);
+
+
+console.log(formateraText("hejSan i veRsaLeR", versaler));
+console.log(formateraText("Nu är texent citerat", citera));
+
+//Att tänka på är att där inte ska vara måsvingar i funktions deklarationerna efter =>
 
