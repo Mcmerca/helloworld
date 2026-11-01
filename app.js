@@ -131,7 +131,7 @@ console.log(getVipBonus(kunder))
 //Djupdyka i vad higher order function (HOF) och callback function är REPETERA DETTA!
 //Metod och Fn är egentligen samma sak, skillnaden är att metod är en funktion i ett objekt.
 
-
+////////////////////////            V44                 /////////////////////////////
 
 //Kvällsövning sortering, filtrering, push & vilkor för att pusha genom en funktion
 /* const lista = [14, 1, 55, 32, 12, 7, 5, 4, 44];
@@ -172,13 +172,21 @@ console.log(formateraText("Nu är texent citerat", citera)); */
 
 
 //Torsdagsövning map och filter
-const tal = [4, 15, 8, 25, 2];
+/* const tal = [4, 15, 8, 25, 2];
 
 const aboveTen = tal.filter(overTen => overTen > 10);
 const addFive = aboveTen.map(add => add + 5)
 
 console.log(aboveTen);
 console.log(addFive);
+ */
 
+// Måndagsövning 1 
 
+const valkommen = (namn, titel = "Medlem") => {
+    return `Välkommen ${titel} ${namn} !`;
+}
+
+console.log(valkommen("Sonny", "Admin"));
+console.log(valkommen("Shanshan"))
 
