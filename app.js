@@ -193,7 +193,7 @@ console.log(valkommen("Shanshan"))
 
 //Måndagsövning 2
 
-const provpoang = [18, 22, 15, 28, 20];
+/* const provpoang = [18, 22, 15, 28, 20];
 
 const rakenaMedel = (pointsArray) => {
     let sum = 0
@@ -208,3 +208,28 @@ const rakenaMedel = (pointsArray) => {
 }
 
 console.log(`Medlpäng på provet: ${rakenaMedel(provpoang)}`);
+ */
+
+//Måndagsövning 3
+
+const kunder = [
+    { namn: "Mia", vip: true, kopSumma: 1200},
+    { namn: "Sam", vip: false, kopSumma: 450},
+    { namn: "Robin", vip: true, kopSumma: 800}
+]
+
+const getVipBonus = (customerArray) => {
+    const result = [];
+    
+
+    for (const kunder of customerArray) {
+        const nyttPris = kunder.kopSumma * 0.9;
+        if(kunder.vip){
+            result.push(kunder.namn, nyttPris);
+        }
+    }
+
+    return result;
+}
+
+console.log(getVipBonus(kunder));
