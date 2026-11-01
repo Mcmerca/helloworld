@@ -104,7 +104,7 @@ console.log(`Medelpoäng på provet: ${raknaMedel(provPoang)}`)
 
 //Övning
 
-const kunder = [
+/* const kunder = [
     { namn: "Mia", VIP: true , kopSumma: 1200},
     { namn: "Sam", VIP: false, kopSumma: 450},
     { namn: "Robin", VIP: true, kopSumma: 800},
@@ -125,3 +125,34 @@ const getVipBonus = (kundArr) => {
 }
 
 console.log(getVipBonus(kunder))
+ */
+
+//Vecka 2 Genomång torsdag
+//Djupdyka i vad higher order function (HOF) och callback function är REPETERA DETTA!
+//Metod och Fn är egentligen samma sak, skillnaden är att metod är en funktion i ett objekt.
+
+
+
+//Kvällsövning sortering, filtrering, push & vilkor för att pusha genom en funktion
+const lista = [14, 1, 55, 32, 12, 7, 5, 4, 44];
+
+const sortedList = (nummerLista) => {
+    
+    const resultat = []
+
+    const sortering = nummerLista.sort((forsta, sista) => forsta - sista);
+    const onlyEven = sortering.filter(even => even % 2 === 0)
+    const odd = sortering.filter(odd => odd % 2 !== 0)
+
+    if(onlyEven.length > odd.length){
+        resultat.push(onlyEven)
+    } else {
+        resultat.push(odd)
+    }
+
+    return resultat;
+}
+
+console.log(sortedList(lista));
+
+
