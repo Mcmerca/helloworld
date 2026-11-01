@@ -183,10 +183,28 @@ console.log(addFive);
 
 // Måndagsövning 1 
 
-const valkommen = (namn, titel = "Medlem") => {
+/* const valkommen = (namn, titel = "Medlem") => {
     return `Välkommen ${titel} ${namn} !`;
 }
 
 console.log(valkommen("Sonny", "Admin"));
 console.log(valkommen("Shanshan"))
+ */
 
+//Måndagsövning 2
+
+const provpoang = [18, 22, 15, 28, 20];
+
+const rakenaMedel = (pointsArray) => {
+    let sum = 0
+
+    for(point of pointsArray){
+        sum += point
+    }
+    
+    const medel = sum/pointsArray.length
+
+    return medel
+}
+
+console.log(`Medlpäng på provet: ${rakenaMedel(provpoang)}`);
