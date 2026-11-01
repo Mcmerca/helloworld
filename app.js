@@ -159,14 +159,26 @@ console.log(sortedList(lista));
 
 //Torsdagsövning egen callback funktion
 
-const versaler = (str) => str.toUpperCase()
+/* const versaler = (str) => str.toUpperCase()
 const citera = (str) => `"${str}"`
 
 const formateraText = (text, callback) => callback(text);
 
 
 console.log(formateraText("hejSan i veRsaLeR", versaler));
-console.log(formateraText("Nu är texent citerat", citera));
+console.log(formateraText("Nu är texent citerat", citera)); */
 
 //Att tänka på är att där inte ska vara måsvingar i funktions deklarationerna efter =>
+
+
+//Torsdagsövning map och filter
+const tal = [4, 15, 8, 25, 2];
+
+const aboveTen = tal.filter(overTen => overTen > 10);
+const addFive = aboveTen.map(add => add + 5)
+
+console.log(aboveTen);
+console.log(addFive);
+
+
 
