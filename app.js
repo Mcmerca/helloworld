@@ -239,7 +239,7 @@ console.log(getVipBonus(kunder));
 
 /////////////////////////////           Repetition V45          ///////////////////////
 
-const versaler = (str) => {
+/* const versaler = (str) => {
     return str.toUpperCase()
 }
 
@@ -256,6 +256,13 @@ const formateraText = (text, callback) => {
 const myName = formateraText("sonny", citera);
 
 console.log(myName);
+ */
 
+const tal = [4, 5, 13, 34, 22, 11];
+
+const overTio = tal.filter((siffra) => siffra > 10);
+const adderaFem = overTio.map(siffra => siffra + 5);
+
+console.log(tal + "\n" + overTio + "\n" + adderaFem );
 
 
