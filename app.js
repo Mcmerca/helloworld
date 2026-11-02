@@ -212,7 +212,7 @@ console.log(`Medlpäng på provet: ${rakenaMedel(provpoang)}`);
 
 //Måndagsövning 3
 
-const kunder = [
+/* const kunder = [
     { namn: "Mia", vip: true, kopSumma: 1200},
     { namn: "Sam", vip: false, kopSumma: 450},
     { namn: "Robin", vip: true, kopSumma: 800}
@@ -224,6 +224,7 @@ const getVipBonus = (customerArray) => {
 
     for (const kunder of customerArray) {
         const nyttPris = kunder.kopSumma * 0.9;
+
         if(kunder.vip){
             result.push(kunder.namn, nyttPris);
         }
@@ -233,3 +234,28 @@ const getVipBonus = (customerArray) => {
 }
 
 console.log(getVipBonus(kunder));
+ */
+//Tänk på scopet till nästa gång, lade först nyttPris variabeln utanför For-of loopen vilket gav NaN på köpsumman.vs
+
+/////////////////////////////           Repetition V45          ///////////////////////
+
+const versaler = (str) => {
+    return str.toUpperCase()
+}
+
+const citera = (str) => {   //Vanligt vis
+    return `"${str}"`
+}
+
+// const citera = (str) => `"${str}"`      <--- Oneliner, fungerar utan måsvingar.
+
+const formateraText = (text, callback) => {
+    return callback(text);
+}
+
+const myName = formateraText("sonny", citera);
+
+console.log(myName);
+
+
+
