@@ -268,11 +268,20 @@ console.log(tal + "\n" + overTio + "\n" + adderaFem );
 
 //Torsdag Övning 1
 
-const stader = ["Stockholm", "Göteborg", "Malmö"]
+/* const stader = ["Stockholm", "Göteborg", "Malmö"]
 
 stader.push("Uppsala");
 
 const tvaStader = stader.slice(0, 2);
 
 console.log(`Original array: ${stader} \n Slicead array:${tvaStader}`);
+ */
+
+//Torsdag Övning 2
+
+const temp = [12, 18, 25, 8, 30, 15];
+
+const newTemp = temp.filter((value) => value > 15).map((value) => value * 2)
+
+console.log(newTemp);
 
