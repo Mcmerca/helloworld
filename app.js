@@ -305,7 +305,7 @@ parseUserData('Invalid JSON'); // Returns null */
 
 //testdata
 
-let braJson = '{"namn": "Anna", "alder":25}';
+/* let braJson = '{"namn": "Anna", "alder":25}';
 let daligJson = 'Detta är inte JSON';
 
 const parseUser = ((str) => {
@@ -320,3 +320,25 @@ const parseUser = ((str) => {
 console.log("Första testet: ", parseUser(braJson));
 console.log("Andra testet: ", parseUser(daligJson));
 
+ */
+
+let allaAnvandare = [
+    {id: 1 , namn: "Bo"},
+    {id: 2, namn: "Sara"}
+];
+
+const sokId = ((id, lista) => {
+    try {
+        let result = lista.find(user => user.id === id);
+        
+        if(result === undefined){
+            throw new Error("Användaren hittades inte");
+        } else {
+            return result.namn;
+        }
+    } catch (error) {
+        console.error(error.message)
+    }
+})
+
+console.log(sokId(3, allaAnvandare));
