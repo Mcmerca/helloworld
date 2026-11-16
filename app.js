@@ -279,9 +279,13 @@ console.log(`Original array: ${stader} \n Slicead array:${tvaStader}`);
 
 //Torsdag Övning 2
 
-const temp = [12, 18, 25, 8, 30, 15];
+/* const temp = [12, 18, 25, 8, 30, 15];
 
 const newTemp = temp.filter((value) => value > 15).map((value) => value * 2)
 
-console.log(newTemp);
+console.log(newTemp); */
+
+// V46 Måndag
+
+
 
