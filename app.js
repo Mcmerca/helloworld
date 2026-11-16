@@ -285,7 +285,23 @@ const newTemp = temp.filter((value) => value > 15).map((value) => value * 2)
 
 console.log(newTemp); */
 
-// V46 Måndag
+// V47 måndag 
+
+const parseUserData = (jsonString) => {
+  try {
+    JSON.parse(jsonString)
+  } catch (error) {
+    console.error(error)
+    console.error("null")
+  } finally{
+    console.log("JSON Parsing finished");
+    
+  }
+};
+
+// Test calls:
+parseUserData('{"username": "alex99"}'); // Returns object
+parseUserData('Invalid JSON'); // Returns null
 
 
 
