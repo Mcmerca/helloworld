@@ -287,12 +287,12 @@ console.log(newTemp); */
 
 // V47 måndag 
 
-const parseUserData = (jsonString) => {
+/* const parseUserData = (jsonString) => {
   try {
-    JSON.parse(jsonString)
+    return JSON.parse(jsonString)
   } catch (error) {
-    console.error(error)
-    console.error("null")
+    console.error("Failed to parse JSON: ", error.message)
+    return null
   } finally{
     console.log("JSON Parsing finished");
     
@@ -301,7 +301,22 @@ const parseUserData = (jsonString) => {
 
 // Test calls:
 parseUserData('{"username": "alex99"}'); // Returns object
-parseUserData('Invalid JSON'); // Returns null
+parseUserData('Invalid JSON'); // Returns null */
 
+//testdata
 
+let braJson = '{"namn": "Anna", "alder":25}';
+let daligJson = 'Detta är inte JSON';
+
+const parseUser = ((str) => {
+    try {
+        return JSON.parse(str)
+    } catch (error) {
+        console.error("Ogiltlig data: ", error.message)
+        return null
+    }
+})
+
+console.log("Första testet: ", parseUser(braJson));
+console.log("Andra testet: ", parseUser(daligJson));
 
