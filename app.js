@@ -322,7 +322,7 @@ console.log("Andra testet: ", parseUser(daligJson));
 
  */
 
-let allaAnvandare = [
+/* let allaAnvandare = [
     {id: 1 , namn: "Bo"},
     {id: 2, namn: "Sara"}
 ];
@@ -341,4 +341,32 @@ const sokId = ((id, lista) => {
     }
 })
 
-console.log(sokId(3, allaAnvandare));
+console.log(sokId(3, allaAnvandare)); */
+
+// Workshop uppgift V47
+
+// 1 Validera datatyper med hjälp av tyoeof och kasta ett felmeddelande "Bort arguments must be numbers"
+// 2 Se till att det inte går att dividera med 0
+// 3 returnera resultat om allting går genom valideringen
+// 4 Kalla på funktionen i ett try/cath/finally block och kalla med matning som bör ge fel
+
+const divide = ((a,b) => {
+    if(typeof a !== "number" || typeof b !== "number"){
+        throw new TypeError("Both arguments must be numbers");
+    }
+    if(b === 0){
+        throw new Error("Division by zero is prohibited");
+    }
+
+    return a / b;
+
+});
+
+try {
+    console.log(divide(10, 0));
+} catch (error) {
+    console.error(error)
+} finally {
+    console.log("Calculation attempted");
+    
+}
