@@ -350,7 +350,7 @@ console.log(sokId(3, allaAnvandare)); */
 // 3 returnera resultat om allting går genom valideringen
 // 4 Kalla på funktionen i ett try/cath/finally block och kalla med matning som bör ge fel
 
-const divide = ((a,b) => {
+/* const divide = ((a,b) => {
     if(typeof a !== "number" || typeof b !== "number"){
         throw new TypeError("Both arguments must be numbers");
     }
@@ -368,5 +368,24 @@ try {
     console.error(error)
 } finally {
     console.log("Calculation attempted");
+} */
+
+//Övning 1 defensiv kod
+
+const processPayment = (balance, amount) => {
+    if (typeof balance !== "number" || Number.isNaN(balance) || typeof amount !== "number" && Number.isNaN(amount)) {
+        throw new Error ("Balance and amount must be a number");
+    }
+    if (amount <= 0) {
+        throw new Error ("Amount must be higher than zero")
+    }
+    if (amount > balance) {
+        throw new Error("overdraft");
+    }
+
+    return balance - amount
     
 }
+
+processPayment(500, -100)
+processPayment()
