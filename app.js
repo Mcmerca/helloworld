@@ -373,19 +373,27 @@ try {
 //Övning 1 defensiv kod
 
 const processPayment = (balance, amount) => {
-    if (typeof balance !== "number" || Number.isNaN(balance) || typeof amount !== "number" && Number.isNaN(amount)) {
-        throw new Error ("Balance and amount must be a number");
+    let totalBalance = 0;
+
+    if (typeof balance !== "number" || Number.isNaN(balance)) {
+        throw new Error("Balance must be an integer");
     }
-    if (amount <= 0) {
-        throw new Error ("Amount must be higher than zero")
+    if (typeof amount !== "number" || Number.isNaN(amount)) {
+        throw new Error("Amount must be an integer");
     }
-    if (amount > balance) {
-        throw new Error("overdraft");
+    if (amount < 1) {
+        throw new Error("Please enter a positive number");
+    }
+    if (amount >= balance) {
+        throw new Error("Transaction blocked due to insufficent funds in balance");
     }
 
-    return balance - amount
-    
+    totalBalance = balance - amount
+
+    return `Your checking account has ${totalBalance}kr. The withdrawn amount is ${amount}kr`
 }
 
-processPayment(500, -100)
-processPayment()
+//console.log(processPayment(500, -100));       Blockeras pga negativt tal i amount
+//console.log(processPayment(500, 900));        Blockeras pga övertrassering
+//console.log(processPayment("500", null));     TypeError pga att input endast accepterar integers
+//console.log(processPayment(1000, 200));       Går genom.
