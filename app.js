@@ -397,7 +397,14 @@ try {
 
 // Övning 2, debugga AI kod
 
-const getAverageActiveAge = (users) => {
+const users = [     //mockdata
+    {id: 1, isActive: false, age: 10},
+    {id: 2, isActive: false, age: 0},
+    {id: 3, isActive: false, age: 20},
+    {id: 4, isActive: false, age: 65}
+]
+
+/* const getAverageActiveAge = (users) => {
   let sum = 0;
   for (const u of users) {
     if (u.isActive === true) {
@@ -407,5 +414,21 @@ const getAverageActiveAge = (users) => {
   if (sum <= 0) {
     throw new Error("Zero active users, active can't be calculated");
   }
-  return sum / users.isActive.length;
+  return sum / users.isActive;
+}; */
+
+const getAverageActiveAge = (users) => {
+  if (!Array.isArray(users)) return 0;
+  let sum = 0;
+  let activeCount = 0;
+
+  for (const u of users) {
+    if (u?.isActive === true && typeof u.age === "number") {
+      sum += u.age;
+      activeCount++;
+    }
+  }
+  return activeCount === 0 ? 0 : sum / activeCount;
 };
+
+console.log(getAverageActiveAge(users));
