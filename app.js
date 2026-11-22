@@ -395,4 +395,17 @@ try {
 //console.log(processPayment("500", null));     TypeError pga att input endast accepterar integers
 //console.log(processPayment(1000, 200));       Går genom. */
 
-//
+// Övning 2, debugga AI kod
+
+const getAverageActiveAge = (users) => {
+  let sum = 0;
+  for (const u of users) {
+    if (u.isActive === true) {
+      sum += u.age;
+    }
+  }
+  if (sum <= 0) {
+    throw new Error("Zero active users, active can't be calculated");
+  }
+  return sum / users.isActive.length;
+};
