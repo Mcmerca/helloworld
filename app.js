@@ -397,14 +397,14 @@ try {
 
 // Övning 2, debugga AI kod
 
-const users = [     //mockdata
+/* const users = [     //mockdata
     {id: 1, isActive: false, age: 10},
     {id: 2, isActive: false, age: 0},
     {id: 3, isActive: false, age: 20},
     {id: 4, isActive: false, age: 65}
 ]
 
-/* const getAverageActiveAge = (users) => {
+ const getAverageActiveAge = (users) => {
   let sum = 0;
   for (const u of users) {
     if (u.isActive === true) {
@@ -415,7 +415,7 @@ const users = [     //mockdata
     throw new Error("Zero active users, active can't be calculated");
   }
   return sum / users.isActive;
-}; */
+}; 
 
 const getAverageActiveAge = (users) => {
   if (!Array.isArray(users)) return 0;
@@ -432,3 +432,44 @@ const getAverageActiveAge = (users) => {
 };
 
 console.log(getAverageActiveAge(users));
+ */
+
+//V48 Måndag
+
+// Övning 1 Vilken kod skrivs ut först
+
+/* console.log("Apple");       // 1.
+
+setTimeout(() => {
+  console.log("Banana");    // 4.
+}, 1000);
+
+setTimeout(() => {
+  console.log("Cherry");    // 3.
+}, 0);
+
+console.log("Date");        // 2. */
+
+//Övning 2
+
+const products = [
+    {name: "Kaffe", price: 150 },
+    {name: "Mjölk", price: 20 },
+    {name: "Ost", price: 102 },
+    {name: "4", price: 70 }
+]
+
+console.log("Loading cheap items");
+
+
+    setTimeout(() => {
+        const cheapProducts = products.filter((item) => item.price < 100)
+
+        for(let item of cheapProducts){
+            console.log(`Item name: ${item.name} costs: ${item.price}`);
+        }
+        
+    },2000)
+
+
+
