@@ -452,7 +452,7 @@ console.log("Date");        // 2. */
 
 //Övning 2
 
-const products = [
+/* const products = [
     {name: "Kaffe", price: 150 },
     {name: "Mjölk", price: 20 },
     {name: "Ost", price: 102 },
@@ -469,7 +469,20 @@ console.log("Loading cheap items");
             console.log(`Item name: ${item.name} costs: ${item.price}`);
         }
         
-    },2000)
+    },2000) */
+
+    //Övning 1 tors V49
+
+    const showProfile = async (userId) => {
+        try {
+            const user = await getUser(userId)
+            const badges = await getBadges(user.name)
+            console.log("Badges: ", badges);
+        } catch (error) {
+            console.error("Failed: ", error.message);
+            
+        }
+    }
 
 
 
